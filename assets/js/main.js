@@ -11,10 +11,13 @@ console.log(prezzoPerChilometro);
 // - va applicato uno sconto del 20% per i minorenni
 if (0 <= utenteEta < 18) {
     var prezzoMinorenne = prezzoPerChilometro - (prezzoPerChilometro * 0.20);
-    console.log(prezzoMinorenne);
+    console.log(prezzoMinorenne.toFixed(2));
 } else {
     console.log("età non valida");
 }
 // - va applicato uno sconto del 40% per gli over 65.
-
+if (utenteEta >= 65) {
+    var prezzoOverAge = prezzoPerChilometro - (prezzoPerChilometro * 0.4);
+    console.log(prezzoOverAge.toFixed(2));
+}
 // L'output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo).
