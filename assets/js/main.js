@@ -8,15 +8,14 @@ console.log(utenteEta + ' anni');
 - il prezzo del biglietto è definito in base ai km (0.21 € al km) */
 var prezzoPerChilometro = nChilometri * 0.21;
 console.log(prezzoPerChilometro);
-// - va applicato uno sconto del 20% per i minorenni
-if (0 <= utenteEta < 18) {
+
+// CALCOLO BIGLIETTO
+if (utenteEta < 18) {
+    // - va applicato uno sconto del 20% per i minorenni
     var prezzoMinorenne = prezzoPerChilometro - (prezzoPerChilometro * 0.20);
     console.log(prezzoMinorenne.toFixed(2));
-} else {
-    console.log("età non valida");
-}
-// - va applicato uno sconto del 40% per gli over 65.
-if (utenteEta >= 65) {
+} else if (utenteEta >= 65) {
+    // - va applicato uno sconto del 40% per gli over 65.
     var prezzoOverAge = prezzoPerChilometro - (prezzoPerChilometro * 0.4);
     console.log(prezzoOverAge.toFixed(2));
 }
